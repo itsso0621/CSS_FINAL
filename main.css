@@ -1,0 +1,263 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+  box-sizing: border-box; 
+  margin: 0;
+}
+
+html {
+  font-size: 10px; 
+  height: 100%; 
+}
+
+body {
+  height: 100%; 
+}
+
+.container {
+  width: 100%; 
+  margin: 0 auto; 
+}
+
+img {
+  max-width: 100%; 
+}
+/*Question #1: The three cards used card layout. It used "display: block" and "display: flex" so that the DIVs to put each cards in the next row  */
+
+/*button styles*/ 
+
+/* EXPLAIN THIS STYLE RULE (1 mark) */ 
+/* Padding property sets the effective space occupied by text by giving it the left and right space to the button element. font size of the button will be 1.25px based on the default font size of HTML selector lign-height sets the height of text inside the button element border-radius make button's edge round / and it is being affected every button in the class pricingTable*/
+.pricingTable button {
+  padding: .5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: .3rem;
+}
+
+
+
+.pricingTable section:first-of-type button {
+  border: 1px solid #007bff;  
+  color: #007bff;
+}
+
+
+/* FIX THIS STYLE RULE  (2 marks) */ 
+
+
+.pricingTable section:nth-of-type(2) button,
+.pricingTable section:nth-of-type(3) button {
+  background-color : #007bff; 
+  color: #fff; 
+  border: transparent; 
+}
+
+.pricingTable section:first-of-type button:hover {
+  background-color : #007bff; 
+  color: #fff; 
+}
+
+.pricingTable section:nth-of-type(2) button:hover,
+.pricingTable section:nth-of-type(3) button:hover {
+  background-color : #2e93ff; 
+  color: #fff; 
+  border: transparent; 
+}
+
+/* Question #5  font */
+@font-face {
+  font-family: 'open_sansregular';
+  src: url('assets/OpenSans-Regular-webfont.eot');
+  src: url('assets/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('assets/OpenSans-Regular-webfont.woff2') format('woff2'),
+       url('assets/OpenSans-Regular-webfont.woff') format('woff'),
+       url('assets/OpenSans-Regular-webfont.ttf') format('truetype'),
+       url('assets/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1,
+h2,
+h4 {
+  font-family: 'open_sansregular';
+  font-weight: bold;
+}
+body {
+  font-family: 'Noticia Text', serif;
+  font-size: 1.8rem;
+}
+
+
+header {
+  display: flex;
+  background-color: #fff;
+  margin-bottom: 1rem;
+  padding: 2rem;
+  font-size: 1.6rem;
+  box-shadow: 0 .125rem .25rem #00000013;
+  width: 100%;
+  align-items: center;
+}
+
+header ul li {
+  list-style-type: none;
+  display: inline;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: #212121;
+  padding: 1rem;
+}
+
+header p {
+  font-size: 2rem;
+  text-align: left;
+  font-weight: 900;
+  margin-right: 50%;
+  margin-left: 2%;
+}
+
+#sign a {
+  border: 1px solid #007bff;  
+  color: #007bff; 
+  padding: .5rem 1rem;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  border-radius: .3rem;
+}
+
+#sign a:hover {
+  background-color: #007bff; 
+  color: #fff;
+}
+
+
+/* list  */
+
+ul li {
+  list-style-type: none;
+  text-align: center;
+}
+
+
+/* section  */
+
+.pricingTable {
+  display: flex;
+  width: 60%;
+  height: auto;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.pricingTable section {
+  border: 1px solid #949494;
+  border-radius: 5px;
+  margin: 1%;
+  text-align: center;
+  padding: 0 1rem;
+  width: 33.3%;
+}
+
+.pricingTable section ul {
+  padding: 0;
+  margin: 1rem;
+}
+
+.pricingTable section button {
+  padding: 1rem 1rem;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  border-radius: .3rem;
+  display: block;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 5%;
+}
+
+/* banner  */ 
+  .bannerimage {
+    height: 30rem;
+    background-image: url(image/banner.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 65%;
+    margin: 0;
+  }
+
+  h1 {
+    margin-top: 5rem;
+    text-align: center;
+    font-size: 5rem;
+  }
+  
+  .pricingP {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: center;
+    margin-bottom: 6rem;
+  }
+
+
+  /* ANSWER NUMBER 4 IS RIGHT HERE! 
+    Set the width of the image as a percentage, not as a fixed value. So you can insert mages that respond according to screen size. Also, limiting the size using max-width can prevent the image from growing too large
+  */
+
+
+/* footer  */ 
+footer {
+  display: flex;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 5%;
+  border-top: 1px solid #949494;
+  margin-bottom: 3rem;
+}
+
+footer div:nth-of-type(1) p {
+  display: none;
+}
+
+footer div {
+  text-align: center;
+  width: 30%;
+  margin-top: 3rem;
+}
+
+footer div ul {
+  margin-top: 1rem;
+  padding: 0;
+}
+
+footer div ul li {
+  padding: 0;
+  color: #949494
+}
+
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 5rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+  h3 {
+    font-size: 2.5rem;
+  }
+
+  h4 {
+    font-size: 2.0rem;
+  }
+  
+  body {
+    font-size: 2.2rem;
+  }
+}
